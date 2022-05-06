@@ -1,0 +1,17 @@
+* Fullstack web development
+    - Frontend / Client side
+        - HTML, CSS, JS
+    - Backend / Server side
+        - Node.js, Python , Ruby, ASP.NET, PHP
+
+
+    * Fullstack architecture
+        - Presentation Layer: UI aspect of the application
+        - Business Logic Layer: Logic and data processing
+        - Data Access Layer: Data storage and retrieval (API)
+
+
+* Node.js
+
+
+* NPM: manages an ecosystem of node modules
