@@ -15,3 +15,11 @@
 
 
 * NPM: manages an ecosystem of node modules
+
+
+* node run time:
+    - manages the execution of code
+    - asychronously executes code 
+        - multiple tasks happen and the ones that come later go into a callback
+        - callback is a function that is called when the code is finished (request queue is empty)
+        
