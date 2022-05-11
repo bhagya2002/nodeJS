@@ -1,0 +1,11 @@
+What is GraphQL?
+    - query language
+    - mutate data
+    - way to query data
+
+Difference between REST and GraphQL?
+    - REST API's give all the info for a certain row in the table
+    - GraphQL gives you the info you want for the specific row in the table
+
+- NodeJS is a lightweight server that runs on the browser
+- ExpressJS is a framework for NodeJS 

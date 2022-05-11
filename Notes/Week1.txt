@@ -106,3 +106,32 @@
         - what packages are installed in the current project
     * scripts
         - what scripts are run when you run npm run <script>
+
+* Web services
+    - system designed to support ineroperability of systems connected over the internet
+    - Service oriented architecture (SOA)
+    - way for two devices to connect over web apps
+
+    * SOAP (Simple Object Access Protocol)
+        - XML based service
+
+    * REST (Representational State Transfer)
+        - uses web standards
+        - exchange of data using either XML or json
+        - uses HTTP protocol
+        - stateless: does not remember state after a request
+        - URIs are used to identify end points
+
+    * Verbs
+        - Get -> read data from a resource
+            - used by clients to request for resources
+        - Post -> create a new resource
+        - Put -> update an existing resource
+        - Delete -> delete a resource
+
+    * Stateless Servers
+        - server side should not track client state, every request is new
+            - stateless makes it scaleable
+        - client side should track own state (cookies, databases, etc.)
+
+
