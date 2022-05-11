@@ -88,3 +88,21 @@
     - const http = require('http');
     - const server = http.createServer(function(req, res) {});
     - server.listen(port, ...)
+
+* Express Server
+    - fast, minimalist web framwork for Node.js
+    - used to build a RESTful API
+    - robust set of features
+    - third party middleware to extend functionality
+
+    - npm install express --save
+
+    * morgan server
+        - middleware that logs HTTP requests
+        - npm install morgan --save
+
+* package.json
+    * dependencies
+        - what packages are installed in the current project
+    * scripts
+        - what scripts are run when you run npm run <script>
