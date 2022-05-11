@@ -74,7 +74,17 @@
         - 200: everything is good
         - 300: redirect
         - 400: is bad
-        - 500: server error
+        - 500: internal server error
             - 200: everything is good
             - 404: page not found
             - 500: server error
+
+    - server's can format the data in XML or JSON
+
+    * JSON
+        - langauge independent
+
+* Node and HTTP Modules (building a HTTP server using Node)
+    - const http = require('http');
+    - const server = http.createServer(function(req, res) {});
+    - server.listen(port, ...)
