@@ -23,3 +23,58 @@
         - multiple tasks happen and the ones that come later go into a callback
         - callback is a function that is called when the code is finished (request queue is empty)
         
+
+* Client and Server side
+    - Client side: browser
+    - Server side: server
+
+    - client-server comms are done through HTTP with REST API that connects to the cloud (server backend and database link)
+
+* Protocol's
+    * HTTP: Hypertext Transfer Protocol
+        - used to transfer data between client and server
+        - retrieval of interlinked text documents (Hypertext)
+        - used to transfer data between client and server
+            - HEAD, GET, POST, PUT, DELETE, etc..
+
+        - you send a URL to the WEB SERVER then the WEB SERVER sends you a response which is found from the data centers in HTML/CSS/JS
+
+
+    * URL: Uniform Resource Locator
+        - identifies a resource on the web
+
+
+    * JSON: JavaScript Object Notation
+        - used to transfer data between client and server
+        - encoding data to ship over the web
+
+
+    * XML: eXtensible Markup Language
+        - used to transfer data between client and server
+
+
+    * SOAP: Simple Object Access Protocol
+        - comms between distributed entities
+
+
+    * REST: Representational State Transfer
+        - state transfer
+
+
+    * RESTful: RESTful web services
+        - RESTful web services are web services that use the HTTP protocol to communicate with a server
+
+
+* Client-Server comms
+    - unexpected response/responce
+    - asychronous nature of comms
+        - not instant, takes time
+
+    - status codes tell you what is wrong or right
+        - 200: everything is good
+        - 300: redirect
+        - 400: is bad
+        - 500: server error
+            - 200: everything is good
+            - 404: page not found
+            - 500: server error
