@@ -1,0 +1,86 @@
+* Express Generator
+    - quick scaffolding tool to generate an Express application skeleton
+    - "express <app name>"
+
+    * generated application skeleton
+        - app.js: staring application
+        - package.json: dependencies
+        - public: static resources
+        - routes: application routes
+        - views: template engine templates
+
+* Databases
+    - used to store structured information
+    - support various operations
+        - Query
+        - Insert
+        - update
+        - Delete
+
+    * NoSQL databases
+        - SQL (structured query language)
+        
+        - Document databases (mongoDB)
+            - a self contained piece of information
+            - usually in JSON format
+            - collection: collection of documents (information about each document)
+            - database: a set of collections
+        - Key-value database (Redis)
+        - Graph databases (Neo4j)
+        - Column-family database (Cassandra)
+
+        - Scalability:
+            - available
+            - consistent
+            - partition tolerance: can be divided, over many servers
+        - Ease of deployment
+            - no object relation mapping required, do not need to map to objects
+
+* mongoDB
+    - document database
+        - server can support multiple databases
+        - dataase consists of a set of documents
+        - JSON document effectively maps to a document
+    - format
+        - stores documents in BSON (binary JSON format)
+        - BSON is a binary format
+            - supports the length prefix on each value
+            - info about the type of a field value
+            - UTC date format, binary, ObjectID is allowed to be stored too
+
+    - mongoDB ObjectID
+        - every doc in mongo must have an "_id" field that is unique, each row has an id
+        - default ObjectId created by Mongo when you insert a doc
+
+        - ObjectID
+            - 12 byte field: timestamp (4 bytes), machine id (3 bytes), process id (2 bytes), increment counter (3 bytes)
+            - id.getTimestamp() returns the timestamp in ISO date format
+
+    * node mongoDB Driver
+        - provides a high level API for a Node application to interact with the MongoDb servers
+        - "npm install mongodb --save"
+
+    * mongoDB Driver
+        - driver supports several operations that can performed from a Node application
+            - connect to mongoDB
+            - CRUD operations
+
+
+* MONGO RUNNING INSTRUCTION
+    - go to the document/mongodb directory in iTerm
+    - "mongod --dbpath=data --bind_ip 127.0.0.1" (run mongoDB at the location of 127001)
+    - "mongo" in another terminal (connect to mongoDB)
+
+    - "db" give the database its pointed towards
+    - "use [database name]", to make a new database
+
+    - "show collections"
+        - shows the collections in the database
+    - "db.createCollection([collection name])"
+        - creates a new collection
+        - "db.[name of collection]" goes to that collection or it makes a new collection if it does not exist
+    - "db.[collection].insert({})" (inserts a new document)
+        - {} is the document to be inserted (make sure its JSON format)
+    - db.[collections].find() OR db.[collections].find().pretty() (finds all documents in the collection)
+        - returns a cursor
+    - "exit" to exit mongoDB
