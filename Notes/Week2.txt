@@ -84,3 +84,40 @@
     - db.[collections].find() OR db.[collections].find().pretty() (finds all documents in the collection)
         - returns a cursor
     - "exit" to exit mongoDB
+
+* Callback Hell
+    - heavily nest callback code
+        - results in tendancy to write code top to bottom
+        - PROMISES can be used to tame the Callback Hell
+            - mongoDB driver supports it
+
+    * Promise 
+        - support asychronous support for Node.js
+        - value does not need to be known when promise is created
+        - placeholder for possible future values
+
+    * PROMISE CHAINING
+        - promise.then(function(value){})
+            - value is the value of the previous promise
+            - function is called when the previous promise is resolved
+            - can return a new promise
+        - promise.catch(function(error){})
+            - error is the error of the previous promise
+            - function is called when the previous promise is rejected
+            - can return a new promise
+        - promise.finally(function(){})
+            - function is called when the previous promise is resolved or rejected
+            - can return a new promise
+
+        - Promise (resolved/fulfilled) - Promise.resolve(result)
+            - value is the value of the promise
+            - promise.then(function(value){})
+                - can be chained together
+        - Promise (rejected) - - Promise.reject(error)
+            - promise.catch(function(error){})
+                - can be chained together
+                - end of .then()
+            - promise.finally(function(){})
+
+    * PROMISE FORMAT
+        - "new Promise( function(resolve, reject){...});"
