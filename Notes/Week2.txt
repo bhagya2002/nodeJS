@@ -121,3 +121,25 @@
 
     * PROMISE FORMAT
         - "new Promise( function(resolve, reject){...});"
+
+* Recap
+    - mongoDB stores data in the form of documents
+    - no structure is imposed on the document
+        - any document(row) is stored in any collection (table)
+
+* Mongoose
+    - imposes a schema for the collection
+    
+    * Mongoose ODM
+        - Object Data model
+        - Object Document mapping
+        - Object Relational Mapping (ORM)
+
+    * Mongoose Schema
+        * Schema
+            - structure for data to be stored
+            - defines all field of your Documents
+
+            - types: string, number, date, buffer, boolean, mixed, ObjectId, array
+
+            - can be used to make a Model function
