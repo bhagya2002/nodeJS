@@ -15,8 +15,39 @@ MongoClient.connect(url, (err, client) => {
   //   what we want to access
   const db = client.db(dbname); // get the database
 
-    //   insert a document
-    dboper.insertDocument(db, { name: "Vadonut", description: "Test" },
-        "dishes", (result) => {
-            
+  //   insert a document in the db with the following attributes
+  dboper.insertDocument(
+    db,
+    { name: "Vadonut", description: "Test" },
+    "dishes",
+    (result) => {
+      console.log("Insert Document:\n", result.ops);
+
+      //  find all the documents in the db
+      dboper.findDocuments(db, "dishes", (docs) => {
+        console.log("Found Documents:\n", docs);
+
+        // update the document in the db with the following attributes
+        dboper.updateDocument(
+          db,
+          { name: "Vadonut" },
+          { description: "Updated Test" },
+          "dishes",
+          (result) => {
+            console.log("Updated Document:\n", result.result);
+
+            // find all the documents in the db
+            dboper.findDocuments(db, "dishes", (docs) => {
+              console.log("Found Documents:\n", docs);
+
+              // "delete" the collections in the database "dishes"
+              db.dropCollection("dishes", (result) => {
+                console.log("Dropped Collection: ", result);
+              });
+            });
+          }
+        );
+      });
+    }
+  );
 });
