@@ -2,6 +2,29 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema; // instantiate a Schema
 
+const commentSchema = new Schema(
+  {
+    // can set min and max bounds
+    rating: {
+      type: Number,
+      min: 1,
+      max: 5,
+      required: true,
+    },
+    comment: {
+      type: String,
+      required: true,
+    },
+    author: {
+      type: String,
+      required: true,
+    },
+  },
+  {
+    timestamp: true,
+  }
+);
+
 const dishSchema = new Schema(
   {
     name: {
@@ -13,6 +36,7 @@ const dishSchema = new Schema(
       type: String,
       required: true,
     },
+    comments: [commentSchema], // calling another schema (commentSchema)
   },
   //   automatically add createdAt and updatedAt fields
   {
